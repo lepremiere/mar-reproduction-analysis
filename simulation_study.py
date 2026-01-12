@@ -112,14 +112,14 @@ def run_single_trial(args):
 if __name__ == "__main__":
     # Configuration
     SEED = 42
-    n_trials = 1
-    ms = range(2, 5, 1)
+    n_trials = 100
+    ms = range(2, 11, 1)
     n_trains = range(100, 501, 100)
     settings = [
         {"style": "VAR", "flawed": True, "symmetric": False},
-        # {"style": "VAR", "flawed": False, "symmetric": False},
-        # {"style": "MAR", "flawed": False, "symmetric": False},
-        # {"style": "MAR", "flawed": False, "symmetric": True}
+        {"style": "VAR", "flawed": False, "symmetric": False},
+        {"style": "MAR", "flawed": False, "symmetric": False},
+        {"style": "MAR", "flawed": False, "symmetric": True}
     ]
     
     for setting in settings:
